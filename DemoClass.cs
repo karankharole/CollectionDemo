@@ -29,6 +29,59 @@ namespace CollectionDemo
                 Console.WriteLine($"Key = {element.Key} , Value = {element.Value}");
             }
         }
+
+        public void QueueDemo()
+        {
+            Console.WriteLine("\n**********Queue Demo**********");
+
+            Queue<int> objQueue = new Queue<int>();
+            objQueue.Enqueue(1);
+            objQueue.Enqueue(2);
+            objQueue.Enqueue(3);
+            objQueue.Enqueue(4);
+            Console.WriteLine($"\nHead: {objQueue.Peek()}");
+            Console.WriteLine($"\nIterating the queue elements: ");
+
+            foreach (var element in objQueue)
+            {
+                Console.WriteLine(element);
+            }
+            int objDequeue = objQueue.Dequeue();
+            Console.WriteLine($"\nDequeue element: {objDequeue}");
+
+            Console.WriteLine("\nIterating the queue elements after dequeue one element: ");
+            Queue<int>.Enumerator ObjEnumerator = objQueue.GetEnumerator();
+            while (ObjEnumerator.MoveNext())
+            {
+                Console.WriteLine(ObjEnumerator.Current);
+            }
+        }
+        public void QueueProblem()
+        {
+            Console.WriteLine("\n**********Queue Problem **********");
+
+            Queue<int> objQueue = new Queue<int>();
+            objQueue.Enqueue(1);
+            objQueue.Enqueue(2);
+            objQueue.Enqueue(3);
+            objQueue.Enqueue(4);
+            Console.WriteLine($"\nHead: {objQueue.Peek()}");
+            Console.WriteLine($"\nIterating the queue elements: ");
+
+            foreach (var element in objQueue)
+            {
+                Console.WriteLine(element);
+            }
+            int objDequeue = objQueue.Dequeue();
+            Console.WriteLine($"\nDequeue element: {objDequeue}");
+
+            Console.WriteLine("\nIterating the queue elements after dequeue one element: ");
+            Queue<int>.Enumerator ObjEnumerator = objQueue.GetEnumerator();
+            while (ObjEnumerator.MoveNext())
+            {
+                Console.WriteLine(ObjEnumerator.Current);
+            }
+        }
     }
 }
 
